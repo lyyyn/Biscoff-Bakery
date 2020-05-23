@@ -7,7 +7,30 @@
 </head>
 
 <body>
-    
+    <div class="heroimage">
+        <figure class="image is-3by1">
+            <img class="cover"
+                src="https://vladimirmorozov.ru/media/reklamnaya-fotografia-vladimir-morozov-fotograf-bread-02.jpg">
+        </figure>
+    </div>
+
+    <div class="mysection">
+        <h1 class="title is-1">Biscoff Bakery</h1>
+    </div>
+
+    <div class="mysection">
+        <div class="flex-prod">
+            <%products.forEach((product,idx)=>{%>
+            <div class="mycard">
+                <img class="mycard-image" src="<%=product.image%>" alt="<%=product.name%>">
+                <p><strong><%=product.name%></strong></p>
+                <p><em>SGD <%=product.price%></em></p>
+                <a class="button bottom" href="/<%=idx%>">View Details</a>
+            </div>
+            
+            <%})%>
+        </div>
+    </div>
 </body>
 
 </html>

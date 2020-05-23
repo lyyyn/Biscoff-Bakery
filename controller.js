@@ -3,12 +3,10 @@ const products = require('./models/bakedGoods.js');
 
 module.exports = {
     index: (req, res) => {
-        res.send('index.ejs');
-            // res.render('index.ejs',
-            // {
-            //     ledger: Budget,
-            //     bankAccount: sum
-            // });
+        res.render('index.ejs',
+            {
+                products
+            });
     },
     show: (req, res) => {
         res.send('detail.ejs');
@@ -32,12 +30,12 @@ module.exports = {
     },
     update: (req, res) => {
         // add our form data to our Array Data
-        products[req.params.idx]=(req.body);
+        products[req.params.idx] = (req.body);
         res.redirect('/admin');
     },
     delete: (req, res) => {
         // add our form data to our Array Data
-        products.slice(req.params.idx,1);
+        products.slice(req.params.idx, 1);
         res.redirect('/admin');
     },
 
