@@ -5,8 +5,8 @@ The front end is where customer can see the product offering.
 The back end is for the owner to manage the product (CRUD).
 
 ### Demo
-Front end: https://biscoff-bakery.herokuapp.com/
-Back end: https://biscoff-bakery.herokuapp.com/admin 
+* Front end: https://biscoff-bakery.herokuapp.com/
+* Back end: https://biscoff-bakery.herokuapp.com/admin 
 
 ### Goal
 Full CRUD App
