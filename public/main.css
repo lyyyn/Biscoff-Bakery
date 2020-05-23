@@ -1,15 +1,27 @@
-.heroimage {
-    width: 800px;
-    margin: 0 auto;
-}
-
 .mysection {
     width: 800px;
     margin: 10px auto;
 }
 
+.heroimage {
+    width: 800px;
+    margin: 0 auto;
+}
+
 .cover {
-    object-fit: cover !important;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-size: cover !important;
+    background-position: center; 
+    background-image: url(https://thumbor.forbes.com/thumbor/711x439/https://blogs-images.forbes.com/micahsolomon/files/2019/03/By-the-Way-Bakery-Hastings-on-Hudson-Storefront-credit-leslie-kahan-Leslie-Kahan-Photography.jpg?width=960);
+}
+
+.myhero-title {
+    justify-self: center;
+    background-color: rgb(255, 255, 255,0.5);
+    font-size: 48px;
+    padding: 20px 0 20px 0;
 }
 
 .flex-prod {
