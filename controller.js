@@ -48,13 +48,12 @@ module.exports = {
     },
     update: (req, res) => {
         // add our form data to our Array Data
-        console.log(req.body);
         products[req.params.idx] = (req.body);
         res.redirect('/admin');
     },
     delete: (req, res) => {
         // add our form data to our Array Data
-        products.slice(req.params.idx, 1);
+        products.splice(req.params.idx, 1);
         res.redirect('/admin');
     },
 

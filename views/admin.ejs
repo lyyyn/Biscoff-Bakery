@@ -47,7 +47,9 @@
                 <a class="button bottom" href="/admin/edit/<%=idx%>">Edit</a>
             </div>
             <div class="column is-one-fifths">
-                <a class="button bottom" href="/admin/<%=idx%>">Delete</a>
+                <form action="/admin/<%= idx %>?_method=DELETE" method="POST">
+                    <input type="submit" class="button bottom" value="Delete" />
+                </form>
             </div>
         </div>
         <%})%>
