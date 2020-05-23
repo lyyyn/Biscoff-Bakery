@@ -24,12 +24,19 @@ module.exports = {
         res.render('edit.ejs',
             {
                 title:'Add New Product',
-                action:'create',
+                idx:'',
+                override:'',
                 product:{name:'',price:'',image:''}
             });
     },
     edit: (req, res) => {
-        res.send('edit.ejs');
+        res.render('edit.ejs',
+            {
+                title:'Edit Product',
+                idx:'/' + req.params.idx,
+                override:'?_method=PUT',
+                product:products[req.params.idx]
+            });
     },
     create: (req, res) => {
         // add our form data to our Array Data - don't forget the input tag in ejs must have name="xxx"
@@ -41,6 +48,7 @@ module.exports = {
     },
     update: (req, res) => {
         // add our form data to our Array Data
+        console.log(req.body);
         products[req.params.idx] = (req.body);
         res.redirect('/admin');
     },

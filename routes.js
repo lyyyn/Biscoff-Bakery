@@ -8,7 +8,7 @@ module.exports = (app) => {
     app.get('/admin/add', func.add);
 
     // edit - need to show a form
-    app.get('/admin/edit', func.edit);
+    app.get('/admin/edit/:idx', func.edit);
 
     // CRUD main listing
     app.get('/admin', func.admin);
