@@ -21,13 +21,18 @@ module.exports = {
             });
     },
     add: (req, res) => {
-        res.send('add.ejs');
+        res.render('edit.ejs',
+            {
+                title:'Add New Product',
+                action:'create',
+                product:{name:'',price:'',image:''}
+            });
     },
     edit: (req, res) => {
         res.send('edit.ejs');
     },
     create: (req, res) => {
-        // add our form data to our Array Data
+        // add our form data to our Array Data - don't forget the input tag in ejs must have name="xxx"
         products.push(req.body);
         res.redirect('/admin');
     },

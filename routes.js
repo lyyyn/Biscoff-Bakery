@@ -3,15 +3,15 @@ const func = require('./controller');
 module.exports = (app) => {
     // Root - important for Heroku
     app.get('/', func.index);
-
-    // CRUD main listing
-    app.get('/admin', func.admin);
-
+    
     // add - need to show a form
     app.get('/admin/add', func.add);
 
     // edit - need to show a form
     app.get('/admin/edit', func.edit);
+
+    // CRUD main listing
+    app.get('/admin', func.admin);
 
     // create - actually create a new item
     app.post('/admin', func.create);

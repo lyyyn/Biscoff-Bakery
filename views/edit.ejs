@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Biscoff Bakery - <%=title%></title>
+</head>
+
+<body>
+    <div class="heroimage">
+        <h1 class="title myhero-title">Biscoff Bakery - <%=title%></h1>
+    </div>
+
+    <div class="mysection column is-one-third">
+        <form action="/admin" method="POST">
+            <div class="field">
+                <label class="label">Product Name</label>
+                <div class="control">
+                    <input class="input" name="name" type="text" placeholder="Product Name" value="<%=product.name%>">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Unit Price</label>
+                <div class="control">
+                    <input class="input" name="price" type="text" placeholder="Unit Price in SGD" value="<%=product.price%>">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Image</label>
+                <div class="control">
+                    <input class="input" name="image" type="text" placeholder="Image filename" value="<%=product.image%>">
+                </div>
+            </div>
+            <div class="field is-grouped">
+                <div class="control">
+                    <button type="submit" class="button is-link">Save</button>
+                </div>
+                <div class="control">
+                    <button type="reset" class="button is-link is-light">Reset</button>
+                </div>
+                <div class="control">
+                    <a class="button bottom" href="/admin">Back</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

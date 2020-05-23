@@ -12,7 +12,7 @@
     </div>
 
     <div class="mysection">
-        <a class="button bottom" href="/add">Add New Product</a>
+        <a class="button bottom" href="/admin/add">Add New Product</a>
     </div>
 
     <div class="mysection">
@@ -44,10 +44,10 @@
                 <%=product.price%>
             </div>
             <div class="column is-one-fifths">
-                <a class="button bottom" href="/edit/<%=idx%>">Edit</a>
+                <a class="button bottom" href="/admin/edit/<%=idx%>">Edit</a>
             </div>
             <div class="column is-one-fifths">
-                <a class="button bottom" href="/delete/<%=idx%>">Delete</a>
+                <a class="button bottom" href="/admin/<%=idx%>">Delete</a>
             </div>
         </div>
         <%})%>
