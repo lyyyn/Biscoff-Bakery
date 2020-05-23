@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Biscoff Bakery - <%=product.name%></title>
+</head>
+
+<body>
+    <div class="heroimage">
+        <div class="image is-3by1 cover">
+            <h1 class="title myhero-title">Welcome to Biscoff Bakery</h1>
+        </div>
+    </div>
+
+    <div class="mysection">
+        <h1 class="title is-1">&nbsp;</h1>
+    </div>
+
+    <div class="mysection">
+        <div class="columns">
+            <div class="column is-half">
+                <figure class="image">
+                    <img class="is-square" src="<%=product.image%>" alt="<%=product.name%>">
+                </figure>
+            </div>
+            <div class="column is-half">
+                <p class="title is-3"><strong><%=product.name%></strong></p>
+                <p class="title is-4"><em>SGD <%=product.price%></em></p>
+                <a class="button bottom is-warning" href="#0">Order Now</a> <br/> <br/>
+                <a class="button bottom" href="/">Back</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

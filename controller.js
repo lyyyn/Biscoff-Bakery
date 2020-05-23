@@ -9,7 +9,10 @@ module.exports = {
             });
     },
     show: (req, res) => {
-        res.send('detail.ejs');
+        res.render('detail.ejs',
+            {
+                product: products[req.params.idx]
+            });
     },
     admin: (req, res) => {
         res.send('admin.ejs');
