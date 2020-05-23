@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Biscoff Bakery - Admin</title>
+</head>
+
+<body>
+    <div class="heroimage">
+        <h1 class="title myhero-title">Biscoff Bakery - Admin</h1>
+    </div>
+
+    <div class="mysection">
+        <a class="button bottom" href="/add">Add New Product</a>
+    </div>
+
+    <div class="mysection">
+        <hr>
+        <div class="columns">
+            <div class="column is-one-fifth">
+                &nbsp;
+            </div>
+            <div class="column is-two-fifths">
+                Product Name
+            </div>
+            <div class="column is-one-fifths">
+                Unit Price
+            </div>
+            <div class="column is-one-fifths">
+                Action
+            </div>
+        </div>
+        <%products.forEach((product,idx)=>{%>
+        <hr>
+        <div class="columns">
+            <div class="column is-one-fifth">
+                <img class="image is-64x64" src="<%=product.image%>" alt="<%=product.name%>">
+            </div>
+            <div class="column is-two-fifths">
+                <%=product.name%>
+            </div>
+            <div class="column is-one-fifths">
+                <%=product.price%>
+            </div>
+            <div class="column is-one-fifths">
+                <a class="button bottom" href="/edit/<%=idx%>">Edit</a>
+            </div>
+            <div class="column is-one-fifths">
+                <a class="button bottom" href="/delete/<%=idx%>">Delete</a>
+            </div>
+        </div>
+        <%})%>
+    </div>
+</body>
+
+</html>

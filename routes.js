@@ -4,9 +4,6 @@ module.exports = (app) => {
     // Root - important for Heroku
     app.get('/', func.index);
 
-    // view details in frontend
-    app.get('/:idx', func.show);
-
     // CRUD main listing
     app.get('/admin', func.admin);
 
@@ -27,4 +24,7 @@ module.exports = (app) => {
 
     // update - actually update the item
     app.delete('/admin/:idx', func.delete);
+
+    // view details in frontend
+    app.get('/:idx', func.show);
 };

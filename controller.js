@@ -15,7 +15,10 @@ module.exports = {
             });
     },
     admin: (req, res) => {
-        res.send('admin.ejs');
+        res.render('admin.ejs',
+            {
+                products
+            });
     },
     add: (req, res) => {
         res.send('add.ejs');
