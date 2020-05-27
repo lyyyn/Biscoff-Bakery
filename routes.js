@@ -1,30 +1,28 @@
-const func = require('./controller');
+const fe = require('./feController');
+const be = require('./beController');
 		
 module.exports = (app) => {
     // Root - important for Heroku
-    app.get('/', func.index);
+    app.get('/', fe.index);
     
     // add - need to show a form
-    app.get('/admin/add', func.add);
+    app.get('/admin/add', be.add);
 
     // edit - need to show a form
-    app.get('/admin/edit/:idx', func.edit);
+    app.get('/admin/edit/:idx', be.edit);
 
     // CRUD main listing
-    app.get('/admin', func.admin);
+    app.get('/admin', be.admin);
 
     // create - actually create a new item
-    app.post('/admin', func.create);
-
-    // view - view an item
-    app.get('/admin/:idx', func.view);
+    app.post('/admin', be.create);
 
     // update - actually update the item
-    app.put('/admin/:idx', func.update);
+    app.put('/admin/:idx', be.update);
 
     // update - actually update the item
-    app.delete('/admin/:idx', func.delete);
+    app.delete('/admin/:idx', be.delete);
 
     // view details in frontend
-    app.get('/:idx', func.show);
+    app.get('/:idx', fe.show);
 };
