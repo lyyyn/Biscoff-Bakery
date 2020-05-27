@@ -11,18 +11,14 @@ module.exports = {
     add: (req, res) => {
         res.render('edit.ejs',
             {
-                title:'Add New Product',
-                idx:'',
-                override:'',
-                product:{name:'',price:'',image:''}
+                type:'Add'
             });
     },
     edit: (req, res) => {
         res.render('edit.ejs',
             {
-                title:'Edit Product',
+                type:'Edit',
                 idx:'/' + req.params.idx,
-                override:'?_method=PUT',
                 product:products[req.params.idx]
             });
     },

@@ -3,32 +3,32 @@
 
 <head>
     <%- include('./partials/head.ejs') %>
-    <title>Biscoff Bakery - <%=title%></title>
+    <title>Biscoff Bakery - <%=type%> Product</title>
 </head>
 
 <body>
     <div class="hero-image">
-        <h1 class="title myhero-title">Biscoff Bakery - <%=title%></h1>
+        <h1 class="title myhero-title">Biscoff Bakery - <%=type%> Product</h1>
     </div>
 
     <div class="my-section column is-one-third">
-        <form action="/admin<%=idx%><%=override%>" method="POST">
+        <form action="/admin<%if (type === 'Edit') {%><%=idx%><%}%><%if (type === 'Edit') {%>?_method=PUT<%}%>" method="POST">
             <div class="field">
                 <label class="label">Product Name</label>
                 <div class="control">
-                    <input class="input" name="name" type="text" placeholder="Product Name" value="<%=product.name%>">
+                    <input class="input" name="name" type="text" placeholder="Product Name" value="<%if (type === 'Edit') {%><%=product.name%><%}%>">
                 </div>
             </div>
             <div class="field">
                 <label class="label">Unit Price</label>
                 <div class="control">
-                    <input class="input" name="price" type="text" placeholder="Unit Price in SGD" value="<%=product.price%>">
+                    <input class="input" name="price" type="text" placeholder="Unit Price in SGD" value="<%if (type === 'Edit') {%><%=product.price%><%}%>">
                 </div>
             </div>
             <div class="field">
                 <label class="label">Image</label>
                 <div class="control">
-                    <input class="input" name="image" type="text" placeholder="Image filename" value="<%=product.image%>">
+                    <input class="input" name="image" type="text" placeholder="Image filename" value="<%if (type === 'Edit') {%><%=product.image%><%}%>">
                 </div>
             </div>
             <div class="field is-grouped">
